@@ -3,7 +3,6 @@ import fileUpload from "express-fileupload";
 import mongoose from "mongoose";
 
 import { configs } from "./configs/config";
-import { cronRunner } from "./crons";
 import { AdminRouter } from "./routers/admin.router";
 import { AuthRouter } from "./routers/auth.router";
 import { CarRouter } from "./routers/car.router";
@@ -29,7 +28,6 @@ app.use((err: IError, req: Request, res: Response, next: NextFunction) => {
 });
 
 app.listen(configs.PORT, () => {
-  mongoose.connect(configs.DB_URL);
-  cronRunner();
+  mongoose.connect(configs.DB_URL).then();
   console.log(`Server has started on ${configs.PORT} 🚀🚀🚀`);
 });
