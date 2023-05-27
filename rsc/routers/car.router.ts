@@ -16,6 +16,12 @@ router.get(
   carMiddleware.isValidaVeragePriceCarCity,
   carController.getOne
 );
+router.get(
+  "/car/:carId",
+  carMiddleware.isValidId,
+  carMiddleware.getByIdAndThrow,
+  carController.getOneWithOutAccess()
+);
 
 router.post(
   "/",

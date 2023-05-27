@@ -40,7 +40,20 @@ class CarController {
       next(e);
     }
   }
+  public async getOneWithOutAccess(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<Response<ICar>> {
+    try {
+      const { carId } = req.params;
 
+      const result = await Car.findById(carId);;
+      return res.json(result);
+    } catch (e) {
+      next(e);
+    }
+  }
   public async create(
     req: Request,
     res: Response,
