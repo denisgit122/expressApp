@@ -23,5 +23,5 @@ router.put(
   userMiddleware.isValidUpdate,
   userController.update
 );
-
+router.put("/favorite", userController.favorite);
 export const UserRouter = router;

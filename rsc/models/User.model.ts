@@ -3,7 +3,8 @@ import { model, Schema } from "mongoose";
 import { EGender, EStatusVip, EUser } from "./user.types";
 
 const userSchema = new Schema(
-  {name: {
+  {
+    name: {
       type: String,
     },
     email: {
@@ -30,6 +31,9 @@ const userSchema = new Schema(
     },
     badDesc: {
       type: Number,
+    },
+    favorite: {
+      type: Object,
     },
   },
   {

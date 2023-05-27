@@ -1,6 +1,7 @@
 .header{
-    background: darkcyan;
-    height: 100px;
-    width: 200px;
-    color: blueviolet;
+    border: 1px solid black;
+    background: darkgrey;
+    height: 100vh;
+    width: 100vw;
+    color: silver;
 }

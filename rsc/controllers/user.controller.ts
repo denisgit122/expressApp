@@ -3,8 +3,8 @@ import { NextFunction, Request, Response } from "express";
 import { ApiError } from "../errors/api.error";
 import { Manager } from "../models/manager.model";
 import { User } from "../models/User.model";
-import { userService } from "../services/user.service";
 import { IUser, IUserComment } from "../models/user.types";
+import { userService } from "../services/user.service";
 
 class UserController {
   public async getAll(
@@ -95,6 +95,20 @@ class UserController {
       const { jwtPayload } = req.res.locals;
 
       await userService.delete(userId, jwtPayload);
+
+      return res.sendStatus(200);
+    } catch (e) {
+      next(e);
+    }
+  }
+  public async favorite(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<Response<void>> {
+    try {
+      const data = req.body;
+      console.log(data);
 
       return res.sendStatus(200);
     } catch (e) {

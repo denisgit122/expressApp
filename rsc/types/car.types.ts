@@ -17,6 +17,12 @@ export interface ICar {
   averagePriceCarCity: number;
   averagePriceCarUkr: number;
   photo: string;
+  color: string;
+  carNumber: number;
+  mileage: string;
+  numberOfOwners: number;
+  accident: string;
+  engine: string
   user: IUser | Types.ObjectId;
 }
 // export type ICreateCar = Pick<ICar, "mark" | "model" | "price", | "year", | "power", "description", | "city">;
@@ -30,6 +36,7 @@ export interface ICreateCar {
   power: string;
   description: string;
   city: string;
+  color: string;
   user: IUser | Types.ObjectId;
 }
 export enum ECity {
@@ -58,6 +65,10 @@ export enum EMarkCar {
   renault = "renault",
   ford = "ford",
   skoda = "skoda",
+}
+export enum ETransmission {
+  automatic = "automatic",
+  manual = "manual",
 }
 export enum EModelCar {
   polo = "polo",

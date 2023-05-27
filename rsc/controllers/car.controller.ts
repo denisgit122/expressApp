@@ -5,11 +5,11 @@ import { ApiError } from "../errors/api.error";
 import { Car } from "../models/Car.model";
 import { Manager } from "../models/manager.model";
 import { User } from "../models/User.model";
+import { IUserComment } from "../models/user.types";
 import { carService } from "../services/car.service";
 import { ICommonResponse } from "../types/auth.types";
 import { ICar } from "../types/car.types";
 import { ITokenPayload } from "../types/token.types";
-import { IUserComment } from "../models/user.types";
 
 class CarController {
   public async getAll(
@@ -139,6 +139,7 @@ class CarController {
     res: Response,
     next: NextFunction
   ): Promise<void> {
+    console.log(12);
     try {
       const filter = req.query;
       console.log(filter);

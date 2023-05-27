@@ -1,6 +1,6 @@
 import { model, Schema, Types } from "mongoose";
 
-import { ECity, EMarkCar, EModelCar } from "../types/car.types";
+import { ECity, EMarkCar, EModelCar, ETransmission } from "../types/car.types";
 import { User } from "./User.model";
 
 const carSchema = new Schema(
@@ -66,6 +66,49 @@ const carSchema = new Schema(
     },
     photo: {
       type: Object,
+    },
+    color: {
+      type: String,
+      trim: true,
+      required: [true, "Color is required"],
+      lowercase: true,
+    },
+    transmission: {
+      type: String,
+      enum: ETransmission,
+      trim: true,
+      required: [true, "Transmission is required"],
+      lowercase: true,
+    },
+    carNumber: {
+      type: String,
+      trim: true,
+      required: [true, "Car number is required"],
+      lowercase: true,
+    },
+    mileage: {
+      type: String,
+      trim: true,
+      required: [true, "Mileage is required"],
+      lowercase: true,
+    },
+    numberOfOwners: {
+      type: String,
+      trim: true,
+      required: [true, "Number of owners is required"],
+      lowercase: true,
+    },
+    accident: {
+      type: String,
+      trim: true,
+      required: [true, "Accident of owners is required"],
+      lowercase: true,
+    },
+    engine: {
+      type: String,
+      trim: true,
+      required: [true, "Engine of owners is required"],
+      lowercase: true,
     },
     user: {
       type: Types.ObjectId,
