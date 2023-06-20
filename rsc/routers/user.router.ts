@@ -8,8 +8,14 @@ const router = Router();
 router.get("/", userController.getAll);
 
 router.get(
+  "/byEmail/:email",
+  userMiddleware.getByEmailAndThrow,
+  userController.getByEmail
+);
+
+router.get(
   "/:userId",
-  authMiddleware.checkAccessToken,
+  // authMiddleware.checkAccessToken,
   userMiddleware.isValidId,
   userMiddleware.getByIdAndThrow,
   userController.getOne
@@ -23,5 +29,14 @@ router.put(
   userMiddleware.isValidUpdate,
   userController.update
 );
-router.put("/favorite", userController.favorite);
+router.put(
+  "/favorite/one",
+  authMiddleware.checkAccessToken,
+  userController.uploadFav
+);
+router.get(
+  "/getUserAccess/one",
+  authMiddleware.checkAccessToken,
+  userController.getOneByAccess
+);
 export const UserRouter = router;

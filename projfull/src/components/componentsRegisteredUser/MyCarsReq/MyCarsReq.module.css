@@ -1,0 +1,330 @@
+.headBoxMyCar{
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(#57606f, #2f3542);
+}
+.boxMyCar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding-top: 6vw;
+}
+.loading{
+    position: absolute;
+    margin-top: 5.2vw;
+}
+
+
+.headBox {
+    border: none;
+    width: 30vw;
+    height: 23vw;
+    /*background: linear-gradient(silver, slategray, #3f6198);*/
+    border-radius: 3px;
+    margin-top: 5vw;
+    background-size: 100% auto;
+    box-shadow:
+            0px 5px 8px 0px #7a7e83,
+            5px 0px 8px 0px #7a7e83,
+            0px 0px 8px 5px #7a7e83
+;
+}
+
+.headBox:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 3s infinite;
+    animation: pulse512 2s infinite;
+}
+
+@keyframes pulse512 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(41, 150, 168, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 30px rgb(218 103 68 / 0%);
+    }
+}
+
+.aboutCar{
+    display: flex;
+    justify-content: center;
+}
+.photoCar {
+    margin-top: .4vw;
+    width: 16vw;
+    height: 20vh;
+}
+.desc{
+    color: #2a2a2a;
+    display: flex;
+    font-family: Century;
+    font-size: 1.1vw;
+
+}
+.mark{
+    font-size: 1.1vw;
+    margin: 15px 7px 0 10px;
+}
+.model{
+    font-size: 1.1vw;
+    margin: 16px 5px 0 0;
+}
+.year{
+    color: #2a2a2a;
+    display: flex;
+    font-size: 1.3vw;
+    margin: 10px 0 0 8vh;
+}
+.price{
+    margin: 0 0 0 48%;
+}
+.city{
+    font-size: 1.3vw;
+    margin: 16px 0 0 24%;
+
+}
+.FaMapMarked{
+    color: rgba(7, 7, 7, 0.35);
+    background: none;
+}
+
+
+
+.button {
+    margin-top: 1.7vw;
+    width: 12vw;
+    height: 3vw;
+    margin-left: 9vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #8a466e;
+    font-size: 1.3vw;
+    letter-spacing: 1px;
+    font-family: "Agency FB";
+}
+
+.button, button span {
+    transition: 200ms;
+}
+
+.button .text {
+    transform: translateX(2vw);
+    color: white;
+    font-weight: bold;
+}
+
+.button .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(8vw);
+    height: 3vw;
+    width: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button svg {
+    width: 15px;
+    fill: #eee;
+}
+
+.button:hover {
+    background: #603333;
+}
+
+.button:hover .text {
+    color: transparent;
+}
+
+.button:hover .icon {
+    width: 11vw;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:active .icon svg {
+    transform: scale(0.8);
+}
+
+
+.dotSpinner {
+    margin-left: 13.5vw;
+    --uib-size: 2.8rem;
+    --uib-speed: .9s;
+    --uib-color: #183153;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: var(--uib-size);
+    width: var(--uib-size);
+}
+
+.dotSpinnerDot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.dotSpinnerDot::before {
+    content: '';
+    height: 20%;
+    width: 20%;
+    border-radius: 50%;
+    background-color: var(--uib-color);
+    transform: scale(0);
+    opacity: 0.5;
+    animation: pulse0112 calc(var(--uib-speed) * 1.111) ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(18, 31, 53, 0.3);
+}
+
+.dotSpinnerDot:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.dotSpinnerDot:nth-child(2)::before {
+    animation-delay: calc(var(--uib-speed) * -0.875);
+}
+
+.dotSpinnerDot:nth-child(3) {
+    transform: rotate(90deg);
+}
+
+.dotSpinnerDot:nth-child(3)::before {
+    animation-delay: calc(var(--uib-speed) * -0.75);
+}
+
+.dotSpinnerDot:nth-child(4) {
+    transform: rotate(135deg);
+}
+
+.dotSpinnerDot:nth-child(4)::before {
+    animation-delay: calc(var(--uib-speed) * -0.625);
+}
+
+.dotSpinnerDot:nth-child(5) {
+    transform: rotate(180deg);
+}
+
+.dotSpinnerDot:nth-child(5)::before {
+    animation-delay: calc(var(--uib-speed) * -0.5);
+}
+
+.dotSpinnerDot:nth-child(6) {
+    transform: rotate(225deg);
+}
+
+.dotSpinnerDot:nth-child(6)::before {
+    animation-delay: calc(var(--uib-speed) * -0.375);
+}
+
+.dotSpinnerDot:nth-child(7) {
+    transform: rotate(270deg);
+}
+
+.dotSpinnerDot:nth-child(7)::before {
+    animation-delay: calc(var(--uib-speed) * -0.25);
+}
+
+.dotSpinnerDot:nth-child(8) {
+    transform: rotate(315deg);
+}
+
+.dotSpinnerDot:nth-child(8)::before {
+    animation-delay: calc(var(--uib-speed) * -0.125);
+}
+
+@keyframes pulse0112 {
+    0%,
+    100% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+.card {
+    width: 19vw;
+    height: 25vw;
+    margin-top: 8vw;
+    left: 40vw;
+    border-radius: 20px;
+    padding: 2px;
+    box-shadow: #111 0 1px 3px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    position: relative;
+    cursor: pointer;
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(0deg, #000, #272727);
+    color: #fff;
+    border-radius: 17px;
+    width: 100%;
+    height: 100%;
+    font-size: 1.7vw;
+    font-weight: 900;
+}
+.boxCar{
+    position: absolute;
+    top: 67px;
+    width: 100vw;
+    height: 40.76vw;
+    background: linear-gradient(#57606f, #2f3542);
+    overflow: hidden;
+}
+
+
+.a{
+    margin-left: 10vw;
+    background: none;
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #03e9f4;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform:uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+}
+.a:hover{
+    background: #03e9f4;
+    color: white;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}

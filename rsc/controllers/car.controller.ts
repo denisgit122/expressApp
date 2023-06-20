@@ -48,12 +48,13 @@ class CarController {
     try {
       const { carId } = req.params;
 
-      const result = await Car.findById(carId);;
+      const result = await Car.findById(carId);
       return res.json(result);
     } catch (e) {
       next(e);
     }
   }
+
   public async create(
     req: Request,
     res: Response,
@@ -147,16 +148,15 @@ class CarController {
     }
   }
 
-  public async searchCar(
+  public async getMyCar(
     req: Request,
     res: Response,
     next: NextFunction
-  ): Promise<void> {
-    console.log(12);
+  ): Promise<any> {
     try {
-      const filter = req.query;
-      console.log(filter);
-      const searchedCar = await Car.find(filter);
+      const { jwtPayload } = req.res.locals;
+      const searchedCar = await Car.find({ user: jwtPayload._id });
+
       res.send(searchedCar);
     } catch (e) {
       next(e);

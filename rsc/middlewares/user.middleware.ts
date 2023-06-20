@@ -26,6 +26,28 @@ class UserMiddleware {
       next(e);
     }
   }
+
+  public async getByEmailAndThrow(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<void> {
+    try {
+      const { email } = req.params;
+
+      const user = await User.findOne({ email: email });
+      const admin = await Admin.findOne({ email: email });
+      const manager = await Manager.findOne({ email: email });
+
+      if (!user && !manager && !admin) {
+        throw new ApiError("user not found", 404);
+      }
+      next();
+    } catch (e) {
+      next(e);
+    }
+  }
+
   public getDynamicallyAndThrow(
     fieldName: string,
     from = "body",

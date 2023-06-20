@@ -35,11 +35,13 @@ export class CarValidator {
     engine: this.engine.required(),
   });
   static updateCar = Joi.object({
-    price: this.price,
-    model: this.model,
     mark: this.mark,
+    model: this.model,
+    price: this.price,
+    year: this.year,
     power: this.power,
-    year: this.power,
+    description: this.description,
+    city: this.city,
     color: this.color,
     transmission: this.transmission,
     carNumber: this.carNumber,
@@ -47,6 +49,5 @@ export class CarValidator {
     numberOfOwners: this.numberOfOwners,
     accident: this.accident,
     engine: this.engine,
-    // description: this.description,
   });
 }

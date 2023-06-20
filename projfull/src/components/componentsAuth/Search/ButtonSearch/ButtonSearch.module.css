@@ -1,0 +1,57 @@
+/* From uiverse.io by @Ali-Tahmazi99 */
+.button {
+    display: inline-block;
+    width: 10vw;
+    height: 5vh;
+    border-radius: 10px;
+    border: 2px solid slategray;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+    background: #7a7e83;
+    margin-left: 40%;
+}
+
+.button::before,
+.button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.button::before {
+    left: -5px;
+    background: #494747;
+}
+
+.button::after {
+    right: -5px;
+    background: #777474;
+}
+
+.button:hover::before,
+.button:hover::after {
+    width: 5.33vw;
+}
+
+.button:hover span {
+    color: #000000;
+    font-size: 1.6vw;
+    letter-spacing: 2px;
+    transition: 0.3s;
+    top: 3px;
+}
+
+.button span {
+    top: .5vw;
+    color: #000000;
+    font-size: 1vw;
+    transition: all 0.3s ease-in;
+}

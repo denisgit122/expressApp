@@ -1,0 +1,61 @@
+.boxSelect{
+    width: 18vw;
+    font-size: 1.2vw;
+    height: 27px;
+    background: #7a7e83;
+    cursor: pointer;
+    display: flex;
+    margin-bottom: 15px;
+    z-index: 0;
+    border-radius: 2px;
+}
+.boxSelectTrue{
+    margin-top: 5px;
+    width: 18vw;
+    height: 45px;
+    transition: 2s;
+    background: #252525;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.boxSelectTrue2{
+    margin-top: 25px;
+    width: 18vw;
+    height: 45px;
+    transition: 2s;
+    background: #252525;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.input{
+    background: darkgrey;
+    width: 8vw;
+    height: 20px;
+    cursor: pointer;
+    color: black;
+    z-index: 2;
+}
+
+.icon{
+    /*position: absolute;*/
+    /*margin-left:10.6vw;*/
+}
+.icon2{
+    /*position: absolute;*/
+    /*margin-left: 9.6vw;*/
+}
+.iconUp{
+    margin-left: -1.3vw;
+}
+.iconUp2{
+    margin-left: 10.6vw;
+
+}
+.year{
+    width: 18vw;
+
+    display: flex;
+    justify-content: space-between;
+}

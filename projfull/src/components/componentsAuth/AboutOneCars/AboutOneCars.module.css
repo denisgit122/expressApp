@@ -1,0 +1,420 @@
+.headBox{
+    width: 98.7vw;
+    height: 100vw;
+    top: 70px;
+    overflow: hidden;
+    background: linear-gradient(#57606f, #2f3542);
+    position: absolute;
+}
+.boxRetSearch{
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+}
+.retSearch{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    cursor: pointer;
+    width: 10vw;
+    height: 2vw;
+    font-size: 1.3vw;
+    border: 2px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px 3px slategray,
+    4px 0 4px 3px slategray,
+    0 0 4px 3px slategray;
+}
+.retSearch:hover{
+    box-shadow: 0 4px 2px 1px slategray,
+    2px 0 2px 1px slategray,
+    0 0 2px 1px slategray;
+}
+
+.desc{
+    width: 80vw;
+    margin-left: 10%;
+}
+.engine{
+    margin-top: -1.5vw;
+    font-size: 1.6vw;
+}
+.TbPointFilled{
+    font-size: 1.2vw;
+    margin: -4px 0 0 5px;
+    color: #2f3542;
+}
+
+.mark{
+    font-size: 2.3vw;
+}
+.boxPhotoPrice{
+    display: flex;
+}
+.headBoxPrice{
+    width: 50vw;
+    margin-top: -10px;
+    font-size: 1.7vw;
+}
+
+.user{
+    width: 25vw;
+    margin-top: 20px;
+    height: 34vw;
+    background: linear-gradient(#4d5460, #292e3a);
+
+}
+
+.boxPrice{
+    display: flex;
+    /*justify-content: space-between;*/
+}
+.price{
+    margin: 0;
+    color: rgba(48, 111, 220, 0.68);
+}
+
+.boxPhoto{
+    width: 60vw;
+    height: 50vh;
+}
+
+.lightBox{
+    width: 100vw;
+    height: 140vh;
+    background: rgba(47, 53, 66, 0.8);
+    position: fixed;
+    margin-top: -18vw;
+    overflow: hidden;
+    margin-left: -10vw;
+    padding: 0;
+    z-index: 9;
+}
+
+.cross{
+    position: absolute;
+    right: 2vw;
+    top: 3vw;
+    font-size: 1.6vw;
+    color: rgba(0, 0, 0, 0.73);
+    cursor: pointer;
+    z-index: 2;
+}
+
+
+.headBoxUser{
+    width: 100%;
+    height: 70%;
+    background: linear-gradient(#57606f, #2f3542);
+}
+.seller{
+    width: 100%;
+    height: 20%;
+}
+.allSeller{
+    display: flex;
+    font-family: "Agency FB";
+}
+.allSeller h4{
+    margin: 1vw;
+    font-size: 1.3vw;
+}
+.sellerName{
+    margin-top: -1vw;
+    font-size: 1.4vw;
+    display: flex;
+}
+.sellerName b{
+    margin-top: -.1vw;
+    padding-left: 3px;
+    font-size: 1.5vw;
+}
+.img{
+    width: 6vw;
+    height: 6vw;
+}
+.boxCityName{
+    font-size: 1.5vw;
+    font-family: "Agency FB";
+}
+.FaRegIdCard{
+    font-size: 2vw;
+    position: relative;
+    top: .5vw;
+    padding-right: .5vw;
+    padding-left:.3vw ;
+}
+
+.boxEmail{
+    width: 20vw;
+    height: 7vw;
+    /*background: #7a7e83;*/
+    font-family: "Agency FB";
+}
+.contact{
+    font-size: 1.5vw;
+    margin-left: 5vw;
+}
+.boxInactiveEmail{
+     display: flex;
+ }
+.activeEmail{
+    font-size: 1.6vw;
+    margin: -1.4vw 0 0 0;
+}
+.boxNumber{
+    font-size: 1.6vw;
+    margin-top: .7vw;
+}
+.email{
+    margin: -1.5vw 0 0 1vw;
+    padding: 0;
+    font-size: 1.4vw;
+}
+cite{
+    margin-top: -1vw;
+    cursor: pointer;
+}
+cite:hover{
+    color: #7a7e83;
+}
+.href{
+    margin: 0;
+    text-decoration: none;
+    color: black;
+}
+.number{
+    margin: -2vw 0 0 2.2vw;
+    padding: 0;
+    font-size: 1.6vw;
+}
+
+
+                            /*// button*/
+.boxButton{
+    margin-left: 7vw;
+    margin-top: 2vw;
+}
+
+.btn {
+    width: 10vw;
+    height: 3.4vw;
+    background: linear-gradient(to top, #536493, #30425b, #23487f);
+    color: #000000;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+.btn span {
+    font-size: 1.3vw;
+    text-transform: uppercase;
+    font-family: "Agency FB";
+    letter-spacing: 1px;
+    transition: top 0.5s;
+}
+
+.btnTextOne {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.btnTextTwo {
+    position: absolute;
+    width: 100%;
+    top: 150%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.btn:hover .btnTextOne {
+    top: -100%;
+}
+
+.btn:hover .btnTextTwo {
+    top: 50%;
+}
+
+
+/*/// chat*/
+.boxMessageChat{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(rgba(87, 96, 111, 0.85), rgb(47, 53, 66));
+    position: fixed;
+    margin-left: -10vw;
+    margin-top: -48vw;
+    z-index: 2;
+}
+.boxMessage{
+    border-radius: 20px;
+    width: 30vw;
+    height: 70vh;
+    background: slategray;
+    margin-top: 8vw;
+    margin-left: 35vw;
+}
+.boxWithLoader{
+    padding-top: 7vw;
+}
+.loader {
+    width: 13vw;
+    height: 5.5vw;
+    display: block;
+    margin: auto;
+    background-image: radial-gradient(circle 25px at 25px 25px, #FFF 100%, transparent 0), radial-gradient(circle 50px at 50px 50px, #FFF 100%, transparent 0), radial-gradient(circle 25px at 25px 25px, #FFF 100%, transparent 0), linear-gradient(#FFF 50px, transparent 0);
+    background-size: 50px 50px, 100px 76px, 50px 50px, 120px 40px;
+    background-position: 0px 30px, 37px 0px, 122px 30px, 25px 40px;
+    background-repeat: no-repeat;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.loader::before {
+    content: '';
+    left: 4vw;
+    bottom: 1.5vw;
+    position: absolute;
+    width: 2.8vw;
+    height: 2.8vw;
+    border-radius: 50%;
+    background-color: #FF3D00;
+    background-image: radial-gradient(circle 8px at 18px 18px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 18px 0px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 0px 18px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 36px 18px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 18px 36px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 30px 5px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 30px 5px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 30px 30px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 5px 30px, #FFF 100%, transparent 0), radial-gradient(circle 4px at 5px 5px, #FFF 100%, transparent 0);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    animation: rotationBack 3s linear infinite;
+}
+
+.loader::after {
+    content: '';
+    left: 7vw;
+    bottom: 1vw;
+    position: absolute;
+    width: 1.7vw;
+    height: 1.7vw;
+    border-radius: 50%;
+    background-color: #FF3D00;
+    background-image: radial-gradient(circle 5px at 12px 12px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 12px 0px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 0px 12px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 24px 12px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 12px 24px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 20px 3px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 20px 3px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 20px 20px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 3px 20px, #FFF 100%, transparent 0), radial-gradient(circle 2.5px at 3px 3px, #FFF 100%, transparent 0);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    animation: rotationBack 4s linear infinite reverse;
+}
+
+@keyframes rotationBack {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+
+        /*boxComentCar   */
+.headBoxComment{
+    width: 100%;
+    height: 20vw;
+    /*border: 1px solid black;*/
+    top: 5.8vw;
+}
+.img2{
+    width: 20vw;
+    height: 7vw;
+    margin-left: 2.3vw;
+    margin-top: 10px;
+}
+.boxCommentCar{
+    width: 90%;
+    margin-left: 1vw;
+    height: 13vw;
+    margin-top: -1.5vw;
+    background: linear-gradient(rgba(101, 111, 128, 0.85), rgb(38, 43, 52));
+
+}
+.messageComment{
+    width: 19vw;
+    height: 10vw;
+    flex-wrap: wrap;
+    font-family: "Agency FB";
+    font-size: 1.4vw;
+    margin-left: .8vw;
+    padding-top: 1vw;
+}
+.boxLeaveComment{
+    display: flex;
+    margin-top: -8vw;
+    font-family: "Agency FB";
+    padding: 0;
+}
+.simplePhoto{
+    width: 5vw;
+    height: 5vw;
+}
+.inf{
+    width: 80%;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    font-size: 1.3vw;
+}
+p{
+    margin: 0;
+    font-size: 1.2vw;
+    width: 90%;
+    flex-wrap: wrap;
+}
+
+
+            /*.boxAboutCar*/
+.Description{
+    font-family: "Agency FB";
+    font-size: 1.9vw;
+}
+.headBoxAboutCar{
+    width: 70%;
+    height: 40vw;
+    border: 1px solid black;
+    margin-left: 10vw;
+    margin-top: -1vw;
+    display: flex;
+    justify-content: center;
+}
+.boxAboutCar{
+    width: 80%;
+    height: 30vw;
+    /*background: #7a7e83;*/
+    font-family: "Agency FB";
+    font-size: 1.4vw;
+    letter-spacing: 1.5px;
+}
+
+.boxMarkModelYear{
+    display: flex;
+    justify-content: space-between;
+    margin: -1vw 3vw;
+}
+.AiOutlineCheck{
+    font-size: 1.1vw;
+    color: #03e9f4;
+    /*position: absolute;*/
+    margin: 2vw 0 0 -1vw;
+    padding-right: .5vw;
+}
+.boxDescriptionOneCar{
+    width: 100%;
+    height: 10vw;
+    border:1px solid black;
+}
+.addInf{
+    margin-top: 4vw;
+    font-size: 1.6vw;
+    font-family: "Agency FB";
+}

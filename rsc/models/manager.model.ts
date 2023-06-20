@@ -1,5 +1,7 @@
 import { model, Schema } from "mongoose";
 
+import { EManagerStatusEnum } from "../enums/manager.enum";
+
 const managerSchema = new Schema(
   {
     name: {
@@ -9,6 +11,13 @@ const managerSchema = new Schema(
       type: String,
       unique: true,
       required: [true, "Email is required"],
+      trim: true,
+      lowercase: true,
+    },
+    status: {
+      type: String,
+      enum: EManagerStatusEnum,
+      required: [true, "Status is required"],
       trim: true,
       lowercase: true,
     },

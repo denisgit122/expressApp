@@ -8,6 +8,7 @@ export interface IAdmin {
 export interface IManager {
   _id?: string;
   name: string;
+  status: string;
   email: string;
   password: string;
 }

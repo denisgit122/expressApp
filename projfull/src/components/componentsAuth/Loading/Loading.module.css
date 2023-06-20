@@ -1,0 +1,44 @@
+.box{
+    width: 100vw;
+    height: 100vw;
+    background: rgba(169, 169, 169, 0.82);
+    position: fixed;
+}
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.loaderText {
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+    align-self: center;
+}
+
+.loaderBar {
+    width: 30%;
+    height: 10px;
+    border-radius: 5px;
+    background: linear-gradient(#6a727a, #588d8d, #778585);
+    animation: loader-bar-animation 2s ease-in-out infinite;
+}
+
+@keyframes loader-bar-animation {
+    0% {
+        /* transform: translateX(-100%) rotate(270deg); */
+        transform: translateX(-100%);
+    }
+
+    50% {
+        /* transform: translateX(100%) rotate(-90deg); */
+        transform: translateX(100%);
+    }
+
+    100% {
+        /* transform: translateX(-100%) rotate(270deg); */
+        transform: translateX(-100%);
+    }
+}

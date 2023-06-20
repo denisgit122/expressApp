@@ -17,6 +17,19 @@ class AdminService {
       throw new ApiError(e.message, e.status);
     }
   }
+
+  public async createAdmin(body: IManager): Promise<void> {
+    try {
+      const hashedPassword = await passwordService.hash(body.password);
+      await Admin.create({
+        ...body,
+        password: hashedPassword,
+      });
+    } catch (e) {
+      throw new ApiError(e.message, e.status);
+    }
+  }
+
   public async deleteManag(
     managerId: string,
     jwt: ITokenPayload

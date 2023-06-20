@@ -1,0 +1,312 @@
+body{
+    background: azure;
+}
+.boxCar{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#57606f, #2f3542);
+}
+
+.select{
+    display: flex;
+    justify-content: space-around;
+}
+.headBoxSelect{
+    border: 2px solid slategray;
+    border-radius: 10px;
+    margin-left: 30%;
+    position: relative;
+    width: 45vw;
+    height: 100px;
+    padding-top:100px ;
+}
+
+.boxWithCar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.headBox {
+    border: none;
+    width: 30vw;
+    height: 45vh;
+    background: linear-gradient(silver, slategray, #3f6198);
+    border-radius: 3px;
+    margin-top: 90px;
+    background-size: 100% auto;
+    box-shadow:
+            0px 5px 8px 0px #7a7e83,
+            5px 0px 8px 0px #7a7e83,
+            0px 0px 8px 5px #7a7e83
+;
+}
+
+.headBox:hover {
+    background-position: right center;
+    background-size: 200% auto;
+    -webkit-animation: pulse 3s infinite;
+    animation: pulse512 2s infinite;
+}
+
+@keyframes pulse512 {
+    0% {
+        box-shadow: 0 0 0 0 rgba(41, 150, 168, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 30px rgb(218 103 68 / 0%);
+    }
+}
+
+.aboutCar{
+    display: flex;
+    justify-content: center;
+}
+.photoCar {
+    margin-top: -10px;
+    width: 23vw;
+    height: 29vh;
+}
+.desc{
+    color: #2a2a2a;
+    display: flex;
+    font-family: Century;
+    font-size: 1.1vw;
+
+}
+.mark{
+    font-size: 1.1vw;
+    margin: 15px 7px 0 10px;
+}
+.model{
+    font-size: 1.1vw;
+    margin: 16px 5px 0 0;
+}
+.year{
+    color: #2a2a2a;
+    display: flex;
+    font-size: 1.3vw;
+    margin: 10px 0 0 8vh;
+}
+.price{
+    margin: 0 0 0 48%;
+}
+.city{
+    font-size: 1.3vw;
+    margin: 16px 0 0 24%;
+
+}
+.FaMapMarked{
+    color: rgba(7, 7, 7, 0.35);
+    background: none;
+}
+.loading{
+    margin-top: 20px;
+}
+
+
+.button {
+    margin-top: -.7vw;
+    width: 12vw;
+    height: 3vw;
+    margin-left: 17vw;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    background: #8a466e;
+    font-size: 1.3vw;
+    letter-spacing: 1px;
+    font-family: "Agency FB";
+}
+
+.button, button span {
+    transition: 200ms;
+}
+
+.button .text {
+    transform: translateX(2vw);
+    color: white;
+    font-weight: bold;
+}
+
+.button .icon {
+    position: absolute;
+    border-left: 1px solid #c41b1b;
+    transform: translateX(8vw);
+    height: 3vw;
+    width: 3vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button svg {
+    width: 15px;
+    fill: #eee;
+}
+
+.button:hover {
+    background: #603333;
+}
+
+.button:hover .text {
+    color: transparent;
+}
+
+.button:hover .icon {
+    width: 11vw;
+    border-left: none;
+    transform: translateX(0);
+}
+
+.button:focus {
+    outline: none;
+}
+
+.button:active .icon svg {
+    transform: scale(0.8);
+}
+
+
+
+.a{
+    background: none;
+    position: absolute;
+    display: inline-block;
+    padding: .6vw 1.2vw;
+    color: #03e9f4;
+    font-size: 1.3vw;
+    text-decoration: none;
+    text-transform:uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: -3vw;
+    margin-left: 1vw;
+    letter-spacing: 1px;
+}
+.a:hover{
+    background: #03e9f4;
+    color: white;
+    box-shadow: 0 0 .5vw #03e9f4,
+    0 0 1vw #03e9f4,
+    0 0 2vw #03e9f4,
+    0 0 1vw #03e9f4;
+}
+span{
+    font-size: 1.3vw;
+    position: absolute;
+    display: block;
+}
+
+
+
+.dotSpinner {
+
+    margin-left: 13.5vw;
+    --uib-size: 2.8rem;
+    --uib-speed: .9s;
+    --uib-color: #183153;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: var(--uib-size);
+    width: var(--uib-size);
+}
+
+.dotSpinnerDot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    width: 100%;
+}
+
+.dotSpinnerDot::before {
+    content: '';
+    height: 20%;
+    width: 20%;
+    border-radius: 50%;
+    background-color: var(--uib-color);
+    transform: scale(0);
+    opacity: 0.5;
+    animation: pulse0112 calc(var(--uib-speed) * 1.111) ease-in-out infinite;
+    box-shadow: 0 0 20px rgba(18, 31, 53, 0.3);
+}
+
+.dotSpinnerDot:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.dotSpinnerDot:nth-child(2)::before {
+    animation-delay: calc(var(--uib-speed) * -0.875);
+}
+
+.dotSpinnerDot:nth-child(3) {
+    transform: rotate(90deg);
+}
+
+.dotSpinnerDot:nth-child(3)::before {
+    animation-delay: calc(var(--uib-speed) * -0.75);
+}
+
+.dotSpinnerDot:nth-child(4) {
+    transform: rotate(135deg);
+}
+
+.dotSpinnerDot:nth-child(4)::before {
+    animation-delay: calc(var(--uib-speed) * -0.625);
+}
+
+.dotSpinnerDot:nth-child(5) {
+    transform: rotate(180deg);
+}
+
+.dotSpinnerDot:nth-child(5)::before {
+    animation-delay: calc(var(--uib-speed) * -0.5);
+}
+
+.dotSpinnerDot:nth-child(6) {
+    transform: rotate(225deg);
+}
+
+.dotSpinnerDot:nth-child(6)::before {
+    animation-delay: calc(var(--uib-speed) * -0.375);
+}
+
+.dotSpinnerDot:nth-child(7) {
+    transform: rotate(270deg);
+}
+
+.dotSpinnerDot:nth-child(7)::before {
+    animation-delay: calc(var(--uib-speed) * -0.25);
+}
+
+.dotSpinnerDot:nth-child(8) {
+    transform: rotate(315deg);
+}
+
+.dotSpinnerDot:nth-child(8)::before {
+    animation-delay: calc(var(--uib-speed) * -0.125);
+}
+
+@keyframes pulse0112 {
+    0%,
+    100% {
+        transform: scale(0);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+

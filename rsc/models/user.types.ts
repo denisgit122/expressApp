@@ -24,6 +24,7 @@ export interface IUser {
   statusVip: string;
   status: string;
   badDesc: number;
+  favorite: string;
 }
 export interface IUserComment<T> {
   message: string;

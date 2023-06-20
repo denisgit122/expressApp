@@ -21,6 +21,29 @@ class UserService {
       throw new ApiError(e.message, e.status);
     }
   }
+
+  public getOneByEmailUser(email: string): Promise<IUser> {
+    try {
+      return User.findOne({ email: email });
+    } catch (e) {
+      throw new ApiError(e.message, e.status);
+    }
+  }
+  public getOneByEmailAdmin(email: string): Promise<IUser> {
+    try {
+      return Admin.findOne({ email: email });
+    } catch (e) {
+      throw new ApiError(e.message, e.status);
+    }
+  }
+  public getOneByEmailManager(email: string): Promise<IUser> {
+    try {
+      return Manager.findOne({ email: email });
+    } catch (e) {
+      throw new ApiError(e.message, e.status);
+    }
+  }
+
   public async delete(userId: string, jwtPayload: IUser): Promise<void> {
     try {
       const admin = await Admin.findById(jwtPayload._id);

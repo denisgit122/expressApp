@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 
 import { ApiError } from "../errors/api.error";
+import { Admin } from "../models/admin.model";
 import { Manager } from "../models/manager.model";
 import { User } from "../models/User.model";
 import { IUser, IUserComment } from "../models/user.types";
@@ -30,6 +31,33 @@ class UserController {
       const user = await userService.getOne(userId);
 
       return res.json(user);
+    } catch (e) {
+      next(e);
+    }
+  }
+
+  public async getByEmail(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<Response<IUser>> {
+    try {
+      const { email } = req.params;
+
+      const user = await User.findOne({ email: email });
+      const admin = await Admin.findOne({ email: email });
+      const manager = await Manager.findOne({ email: email });
+
+      if (user && !admin && !manager) {
+        const user = await userService.getOneByEmailUser(email);
+        return res.json(user);
+      } else if (admin && !user && !manager) {
+        const admin = await userService.getOneByEmailAdmin(email);
+        return res.json(admin);
+      } else if (manager && !admin && !user) {
+        const manager = await userService.getOneByEmailManager(email);
+        return res.json(manager);
+      }
     } catch (e) {
       next(e);
     }
@@ -101,16 +129,37 @@ class UserController {
       next(e);
     }
   }
-  public async favorite(
+
+  public async uploadFav(
     req: Request,
     res: Response,
     next: NextFunction
   ): Promise<Response<void>> {
     try {
-      const data = req.body;
-      console.log(data);
+      const { jwtPayload } = req.res.locals;
+      const dat = req.body;
+      const fav = await User.findByIdAndUpdate(
+        jwtPayload._id,
+        { favorite: dat },
+        { new: true }
+      );
+      console.log(fav);
+      return res.status(201).json(fav);
+    } catch (e) {
+      next(e);
+    }
+  }
+  public async getOneByAccess(
+    req: Request,
+    res: Response,
+    next: NextFunction
+  ): Promise<Response<void>> {
+    try {
+      const { jwtPayload } = req.res.locals;
 
-      return res.sendStatus(200);
+      const fav = await User.findById(jwtPayload._id);
+
+      return res.status(201).json(fav);
     } catch (e) {
       next(e);
     }

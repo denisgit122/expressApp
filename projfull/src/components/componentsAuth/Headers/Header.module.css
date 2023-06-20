@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+}
+.header{
+    width: 100vw;
+    height: 70px;
+    background: #2f3542;
+    color: slategray;
+    font-family: "Berlin Sans FB";
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    transition: 2s;
+    z-index: 2;
+}
+.headroom {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    transition: 2s;
+}
+a{
+    text-decoration: none;
+    color: slategray;
+    margin: 100px;
+    transition: 1s;
+}
+.header a:active{
+    color: #7c8bb2;
+}
+.header a[class='active']{
+    color: white;
+    transition: 2s;
+    box-shadow: inset
+            0px 1px 1px 9px #7a7e83,
+            3px 0px 4px 1px #7a7e83,
+            0px 0px 4px 1px #7a7e83
+    ;
+
+}

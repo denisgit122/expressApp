@@ -40,14 +40,14 @@ export interface ICreateCar {
   user: IUser | Types.ObjectId;
 }
 export enum ECity {
-  kyiv = "Kyiv",
+  Kyiv = "Kyiv",
   Kharkiv = "Kharkiv",
   Odesa = "Odesa",
   Dnipro = "Dnipro",
   Donetsk = "Donetsk",
   Zaporizhzhya = "Zaporizhzhya",
   Lviv = "Lviv",
-  Kryvyi_Rih = "Kryvyi Rih",
+  Kryvyi_Rih = "Kryvyi_Rih",
   Mykolaiv = "Mykolaiv",
   Mariupol = "Mariupol",
   Luhansk = "Luhansk",
@@ -82,7 +82,7 @@ export enum EModelCar {
   celica = "celica",
   mark = "mark",
   eqs = "eqs",
-  cla = "cla shooting brake",
+  cla = "cla",
   eclass = "e-class",
   clio = "clio",
   captur = "captur",

@@ -21,7 +21,7 @@ router.post(
   adminMiddleware.getDynamicallyAndThrow("email", "body"),
   managerController.create
 );
-// router.post("/admin/create", ManagerController.create);
+router.post("/admin/create", adminController.create);
 // "name": "mash",
 //     "email": "mash@gmail.com",
 //     "password": "hgjFGHF4",

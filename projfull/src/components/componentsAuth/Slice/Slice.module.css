@@ -1,0 +1,17 @@
+.img2{
+    height: 7.5vw;
+}
+.img {
+    margin-left: 5vw;
+    width: 50vw;
+    height: 35vw;
+    z-index: -1;
+    cursor: pointer;
+}
+.imgLightBox{
+    width: 70vw;
+    height: 45vw;
+    margin-top: 15vh;
+    margin-left: 13vw;
+    position: relative;
+}

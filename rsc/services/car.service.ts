@@ -5,9 +5,9 @@ import { Admin } from "../models/admin.model";
 import { Car } from "../models/Car.model";
 import { Manager } from "../models/manager.model";
 import { User } from "../models/User.model";
+import { IUser } from "../models/user.types";
 import { ICar } from "../types/car.types";
 import { ITokenPayload } from "../types/token.types";
-import { IUser } from "../models/user.types";
 import { s3Service } from "./s3.service";
 
 class CarService {

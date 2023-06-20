@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+}
+.header{
+    width: 100vw;
+    height: 70px;
+    background: #2f3542;
+    color: slategray;
+    font-family: "Berlin Sans FB";
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    transition: 2s;
+    z-index: 2;
+}
+.headroom {
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    transition: 2s;
+}
+a{
+    text-decoration: none;
+    color: slategray;
+    margin: 9vw;
+    transition: 1s;
+}
+.header a:active{
+    color: #7c8bb2;
+}
+.header a[class='active']{
+    color: white;
+    transition: 2s;
+    box-shadow: inset
+            0 1px 1px 9px #7a7e83,
+            3px 0 4px 1px #7a7e83,
+            0 0 4px 1px #7a7e83
+    ;
+
+}
+
+/*/////menu*/
+.BiMenu{
+    width: 3vw;
+    height: 3vw;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: none;
+    margin-right:0;
+}
+
+.LinkMenu{
+    margin-right: 3vw;
+}
+.boxMenu{
+    margin-top: -7vw;
+    transition: ease-in-out 1s;
+    width: 20vw;
+    height: 78vw;
+    background: #ffeded;
+    /*overflow: hidden;*/
+    color: black;
+}
+.logo{
+    margin-top: 39vw;
+    width: 100%;
+    height: 8%;
+   }
+.BsFillMenuButtonWideFill{
+    color: black;
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+}
+.boxNav{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: 2vw;
+    margin-left: 3vw;
+    margin-bottom: 2vw;
+}
+.navLink{
+    color: black;
+    position: absolute;
+    margin-top: .3vw;
+    margin-left: -17vw;
+    font-size: 1.4vw;
+    font-family: "Agency FB";
+    letter-spacing: 1px;
+}
+
+
+/*///boxLogOut*/
+.boxLogOut{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    height: 2vw;
+    margin-left: 3vw;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+}
+.logOut{
+    color: black;
+    position: absolute;
+    margin-top: -.8vw;
+    margin-left: -17vw;
+    font-size: 1.4vw;
+    font-family: "Agency FB";
+    letter-spacing: 1px;
+}
+
+.MdOutlineLogout{
+    width: 2vw;
+    height: 2vw;
+    transition: .6s;
+}
+
+.boxContact{
+    margin-top: 8vw;
+    margin-bottom: .8vw;
+    display: flex;
+    width: 100%;
+    margin-left: -7.8vw;
+}
+.boxContact div{
+    width: 3vw;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.AiOutlineInstagram{
+    width: 2vw;
+    height: 2vw;
+    margin-left: .6vw;
+    cursor: pointer;
+    transition: .3s;
+
+}
+.AiOutlineInstagram:hover{
+    color: #373838;
+    width: 2.3vw;
+    height: 2.3vw;
+    transition: .7s;
+}

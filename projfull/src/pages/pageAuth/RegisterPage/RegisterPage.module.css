@@ -1,0 +1,54 @@
+.registerBox{
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,.7);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+.box{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    width: 98.7vw;
+    height: 130vh;
+    background: linear-gradient(#57606f, #2f3542);
+}
+.registerBox h2{
+    margin: 0 0 30px;
+    padding: 0;
+    color: #ffff;
+    text-align: center;
+}
+.registerBox{
+    position: relative;
+}
+.userBox{
+    height: 50px;
+}
+.userBox select{
+    background: none;
+    border-radius: 4px;
+    width: 150px;
+    height: 25px;
+    color: white;
+    font-family: "Agency FB";
+    font-size: 17px;
+
+
+}
+.userBox option{
+    background: #2f3542 ;
+   font-family: "Agency FB";
+    font-size: 16px;
+}
+.error{
+    margin: -15px 0 25px 0;
+    position: relative;
+    font-size: 2.8vh;
+    background-color: #ff006a;
+}

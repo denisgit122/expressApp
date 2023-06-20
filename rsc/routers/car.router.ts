@@ -20,7 +20,7 @@ router.get(
   "/car/:carId",
   carMiddleware.isValidId,
   carMiddleware.getByIdAndThrow,
-  carController.getOneWithOutAccess()
+  carController.getOneWithOutAccess
 );
 
 router.post(
@@ -57,8 +57,8 @@ router.put(
 );
 
 router.get(
-  "/car/filter",
+  "/getMyCars/car",
   authMiddleware.checkAccessToken,
-  carController.searchCar
+  carController.getMyCar
 );
 export const CarRouter = router;
