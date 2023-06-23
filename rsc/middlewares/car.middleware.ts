@@ -91,7 +91,9 @@ class CarMiddleware {
       const { jwtPayload } = req.res.locals;
       const id = jwtPayload._id;
       const user = await User.findById(id);
+
       const badDesc = user.badDesc;
+
       const inc = +badDesc + 1;
       // await User.findByIdAndUpdate(id, {
       //   badDesc: 1,
@@ -109,7 +111,9 @@ class CarMiddleware {
         "munter",
       ];
       for (const string of bad) {
-        if (badDesc <= 4 && desc.includes(string)) {
+        console.log(user);
+        if (badDesc >= 4 && desc.includes(string)) {
+          console.log(13);
           await User.findByIdAndUpdate(id, {
             badDesc: inc,
           });

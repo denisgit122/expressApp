@@ -89,14 +89,14 @@ input:valid ~ span{
     background: none;
     position: relative;
     display: inline-block;
-    padding: 10px 20px;
+    padding: .9vw 1.6vw;
     color: #03e9f4;
-    font-size: 16px;
+    font-size: 1.3vw;
     text-decoration: none;
     text-transform:uppercase;
     overflow: hidden;
     transition: .5s;
-    margin-top: 40px;
+    margin-top: 3.5vw;
     letter-spacing: 4px;
 }
 .a:hover{
@@ -116,7 +116,7 @@ span{
 
 .button {
     border: none;
-    width: 140px;
+    width: 12vw;
     height: 50px;
     color: #fff;
     z-index: 1;
@@ -128,8 +128,8 @@ span{
 .button p {
     margin: 0 auto;
     align-self: center;
-    font-size: 17px;
-    font-weight: bold;
+    font-size: 1vw;
+    /*font-weight: bold;*/
     text-align: center;
 }
 
