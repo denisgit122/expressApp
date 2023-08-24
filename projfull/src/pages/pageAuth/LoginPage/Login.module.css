@@ -96,7 +96,7 @@ input:valid ~ span{
     text-transform:uppercase;
     overflow: hidden;
     transition: .5s;
-    margin-top: 3.5vw;
+    margin-top: 1vw;
     letter-spacing: 4px;
 }
 .a:hover{

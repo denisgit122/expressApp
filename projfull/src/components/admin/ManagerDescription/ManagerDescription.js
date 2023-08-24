@@ -1,7 +1,7 @@
 import css from "../../manager/AllUser/AllUser.module.css";
 
 const ManagerDescription = ({manager}) => {
-    const {email, name,statusVip,gender } = manager;
+    const {email, name, status} = manager;
 
     return (
         <div>
@@ -9,9 +9,7 @@ const ManagerDescription = ({manager}) => {
 
                 <div className={css.span}>email: {email}</div>
                 <div className={css.span}>name: {name}</div>
-                <div className={css.span}>gender: {gender}</div>
-                <div className={css.span}>statusVip : {statusVip}</div>
-                {/*<div className={css.span}>last_login: {last_login}</div>*/}
+                <div className={css.span}>status: {status}</div>
 
             </div>
         </div>

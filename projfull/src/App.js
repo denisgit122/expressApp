@@ -8,10 +8,18 @@ import {
     RegisterPage,
     CarsPageReg,
     OneCarPageReg,
-    FavoriteCarPage, CreateCarPage, MyCarPage, UpdateCarPage, ManagerAuthLayout, CarsManaPage, UpdateCarManaPage
+    AdminsPage,
+    UsersPage,
+    FavoriteCarPage,
+    CreateCarPage,
+    MyCarPage,
+    UpdateCarPage,
+    ManagerAuthLayout,
+    CarsManaPage,
+    UpdateCarManaPage,
+    AdminAuthLayout, CreateAdminsPage,
 } from "./pages";
-import {AuthManager} from "./components/manager";
-import {UsersPage} from "./pages/pageRegisteredUser/UsersPage/UsersPage";
+
 
 function App() {
     return (
@@ -48,6 +56,13 @@ function App() {
                 <Route path={"/allUsers"} element={<UsersPage/>}/>
 
                 <Route path={"/updateCarAll"} element={<UpdateCarManaPage/>}/>
+
+            </Route>
+
+            <Route element={<AdminAuthLayout/>}>
+
+                <Route path={"/allAdmins"} element={<AdminsPage/>}/>
+                <Route path={"/createAdmin"} element={<CreateAdminsPage/>}/>
 
             </Route>
         </Routes>

@@ -9,7 +9,11 @@ const userService = {
      getByEmail:(email) => axios.get(urlsUser.byEmail(email)),
 
     updateFavor: (data) => axios.put(urlsUser.updateFavor, data),
-    getUserAccess: ()=> axios.get(urlsUser.getUserAccess)
+    getUserAccess: ()=> axios.get(urlsUser.getUserAccess),
+
+    delete : (id) => axios.delete(urlsUser.byId(id)),
+    update : (user, id) => axios.put(urlsUser.update(id),user),
+
 }
 
 export {

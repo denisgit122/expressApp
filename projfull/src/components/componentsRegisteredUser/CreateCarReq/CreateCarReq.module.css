@@ -1,8 +1,17 @@
 .headBoxCreateCar{
     margin: 0;
     padding: 0;
-    width: 98.7vw;
+    width: 100vw;
     height: 200vh;
+    background: linear-gradient(#57606f, #2f3542);
+    font-family: "Agency FB";
+}
+.headBoxCreateMan{
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
     background: linear-gradient(#57606f, #2f3542);
     font-family: "Agency FB";
 }
@@ -27,6 +36,20 @@
     background: rgba(0,0,0,.7);
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+    font-family: "Agency FB";
+
+}
+.loginBoxMan {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: 33vw;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .7);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .6);
     border-radius: 10px;
     font-family: "Agency FB";
 
