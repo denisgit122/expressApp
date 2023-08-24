@@ -1,16 +1,12 @@
-import React, {useEffect, useState} from "react";
-import {useDispatch} from "react-redux";
+import React from "react";
 import {FaMapMarked} from "react-icons/fa";
 
 import css from "../CarMan/Car.module.css";
-import {carAction} from "../../../redux";
 
 const UpdateCarMana = ({car}) => {
 
-    const {_id, mark, model, year, photo, price, power, city} = car
+    const {mark, model, year, photo, price, power, city} = car
     const photo1 = {...photo};
-
-    const dispatch = useDispatch();
 
 
     return (

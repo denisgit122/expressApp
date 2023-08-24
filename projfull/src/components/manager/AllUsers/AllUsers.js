@@ -10,8 +10,8 @@ const AllUsers = () => {
 
     useEffect(() => {
         dispatch(userAction.getAll())
-    },[dispatch])
-    console.log(users)
+    },[dispatch]);
+
 return (
   <div className={css.allUserBox}>
       { users && users.map(user=> <AllUser key={user._id} user={user}/>)}

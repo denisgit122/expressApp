@@ -29,6 +29,7 @@ const LoginPage = () => {
            setData(userCredential)
         }catch (error) {}
     }
+
     useEffect(() => {
         dispatch(authAction.login(data))
 
@@ -42,7 +43,9 @@ const LoginPage = () => {
             } if (userByEmail.status === 'manager'){
                 navigate("/allCar")
             }
-
+            if (userByEmail.admin === 'admin'){
+                navigate("/allAdmins")
+            }
         }
         setErr(error)
 

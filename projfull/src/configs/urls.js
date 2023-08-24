@@ -58,7 +58,8 @@ const urlsUser = {
     byId: (id) => `${user}/${id}`,
     byEmail: (email) =>`${user}/byEmail/${email}`,
     updateFavor: '/user/favorite/one',
-    getUserAccess: '/user/getUserAccess/one'
+    getUserAccess: '/user/getUserAccess/one',
+    update:(id)=> `${user}/${id}`
 }
 const urlsAuth = {
     auth: {
@@ -68,10 +69,18 @@ const urlsAuth = {
 
     }
 }
+const urlsAdmin = {
+    admin: {
+        getAllManagers: '/manager',
+        createAdmin: '/admin/manager',
+        deleteAdmin:(id)=> `/manager/${id}`,
 
+    }
+}
 const urlsManager = {
 }
 export {
+    urlsAdmin,
     urlsManager,
     urlsCar,
     urlsAuth,

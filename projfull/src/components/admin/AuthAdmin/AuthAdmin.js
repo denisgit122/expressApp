@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 
 import {MdOutlineLogout} from "react-icons/md";
 
-const AuthManager = () => {
+const AuthAdmin = () => {
     const logOut = () => {
         localStorage.removeItem("access");
 
@@ -14,11 +14,8 @@ const AuthManager = () => {
         <Headroom className={css.headroom}>
             <header className={css.header}>
 
-                <NavLink to={"/allUsers"}>Users</NavLink>
-
-                <NavLink to={"/allCar"}>Cars</NavLink>
-
-                <NavLink to={"/updateCarAll"}>Update car</NavLink>
+                <NavLink to={"/allAdmins"}>Admin</NavLink>
+                <NavLink to={"/createAdmin"}>Create admin</NavLink>
 
                 <a href="" onClick={()=>logOut()}>
                     <MdOutlineLogout className={css.MdOutlineLogout}/>
@@ -31,4 +28,4 @@ const AuthManager = () => {
     );
 };
 
-export {AuthManager};
+export {AuthAdmin};

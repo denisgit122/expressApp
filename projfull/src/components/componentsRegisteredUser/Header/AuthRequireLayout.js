@@ -18,7 +18,13 @@ const AuthRequire = () => {
     const menu = () => {
       menuAct ? setMenuAct(false) : setMenuAct(true)
     }
+    const logOut = () => {
+        localStorage.removeItem("access");
+
+        localStorage.removeItem("refresh")
+    }
     return (
+
         <Headroom className={css.headroom}>
             <header className={css.header}>
 
@@ -80,8 +86,7 @@ const AuthRequire = () => {
 
                              <div>
 
-                                 <a href="" className={css.logOut}  onClick={()=>
-                                     localStorage.removeItem("access")}>
+                                 <a href="" className={css.logOut}  onClick={()=>logOut()}>
                                      Sign Out
                                  </a>
                              </div>

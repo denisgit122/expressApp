@@ -1,3 +1,5 @@
 export * from './registerValidator'
 export * from './loginValidator'
 export * from './createCarValidator'
+export * from './updateUserValidator'
+export * from './adminValidator'

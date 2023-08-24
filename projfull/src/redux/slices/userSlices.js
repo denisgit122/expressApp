@@ -7,7 +7,8 @@ let initialState = {
     userByEmail:[],
     user:[],
     error: null,
-    loading: null
+    loading: null,
+    errorUpdate: ''
 };
 const getAll = createAsyncThunk (
     "userSlice/getAll",
@@ -54,6 +55,32 @@ const updateFavor = createAsyncThunk (
     }
 );
 
+const deleteUser = createAsyncThunk (
+    "userSlice/deleteUser",
+    async (id, thunkAPI)=>{
+        try {
+            const {data} = await userService.delete(id);
+            thunkAPI.dispatch(getAll());
+            return data
+        }catch (e) {
+            return thunkAPI.rejectWithValue(e.response.data);
+        }
+    }
+);
+
+const updateUser = createAsyncThunk (
+    "userSlice/updateUser",
+    async ({user, id}, thunkAPI)=>{
+        console.log(user);
+        try {
+            const {data} = await userService.update(user, id);
+            thunkAPI.dispatch(getAll());
+            return data
+        }catch (e) {
+            return thunkAPI.rejectWithValue(e.response.data);
+        }
+    }
+);
 const userSlice = createSlice({
     name: "userSlice",
     initialState,
@@ -70,6 +97,8 @@ const userSlice = createSlice({
         },
         [getByEmail.rejected]: (state)=>{
             state.error = ''
+        },[updateUser.rejected]: (state, action)=>{
+          state.errorUpdate = action.payload
         },
     }
 })
@@ -79,6 +108,8 @@ const userAction = {
     getAll,
     getById,
     getByEmail,
+    deleteUser,
+    updateUser,
 }
 export {
     userReducer,
